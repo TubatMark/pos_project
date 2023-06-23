@@ -1,6 +1,6 @@
 <?php include "../../includes/header.php" ?>
 
 <body>
-    <header>admin page</header>
+    <header>Employee page</header>
 </body>
 </html>

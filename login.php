@@ -13,10 +13,10 @@
 		$user_type = $user['user_type'];
 
 		if ($user_type == 'admin') {
-			echo "paker";
+			header("Location: users/admin/admin_page.php");
 			exit();
 		} elseif ($user_type == 'cashier') {
-			echo "mader";
+			header("Location: users/employees/employee_page.php");
 			exit();
 		} else {
 			echo "No record found. Please register first.";
