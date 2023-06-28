@@ -18,6 +18,8 @@
 .sidebar-header {
     font-size: 18px;
     margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
 }
 
 .sidebar-menu li {
@@ -29,8 +31,19 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #555;
 }
 
 .sidebar-menu li a i {
     margin-right: 10px;
+}
+
+.sidebar-menu li.active a {
+    background-color: #555;
 }
