@@ -1,9 +1,9 @@
 <?php
-	include "includes/db.php";
+	include "db.php";
 
-	$email = mysqli_real_escape_string($con, $_POST['email']);
+	$name = mysqli_real_escape_string($con, $_POST['name']);
 	$password = mysqli_real_escape_string($con, $_POST['password']);
-	$user_result = mysqli_query($con, "SELECT * FROM users WHERE email='$email'");
+	$user_result = mysqli_query($con, "SELECT * FROM users WHERE name='$name'");
 
 	#echo "welcome maderpaker";
 
@@ -13,10 +13,10 @@
 		$user_type = $user['user_type'];
 
 		if ($user_type == 'admin') {
-			header("Location: users/admin/admin_page.php");
+			header("Location: ../users/admin/admin_dashboard.php");
 			exit();
 		} elseif ($user_type == 'cashier') {
-			header("Location: users/employees/employee_page.php");
+			header("Location: ../users/employees/employee_page.php");
 			exit();
 		} else {
 			echo "No record found. Please register first.";
