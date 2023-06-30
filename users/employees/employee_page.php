@@ -12,95 +12,40 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-lg-8">
-                            sample
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="../employees/cashier_styles/pictures/fries.jpg" class="topimg">
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="top">
+                                        <h4 id="h4">French Fries</h4>
+                                        <button type="button" class="btn btn-danger" id="btn-delete">Delete Item</button>
+
+                                    </div>
+                                    <div class="mid">
+                                        <h6>Price PHP</h6>
+                                        <h4 id="h41">₱200.00</h4>
+                                        <div class="quantity-input">
+                                            <button class="minus-btn">-</button>
+                                            <input type="number" class="quantity" value="1" min="1">
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                        <h6>Total PHP</h6>
+                                        <h4 id="h41">₱1250.25</h4>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-3">
+                                    <h6>Total PHP</h6>
+                                    <h4 id="h41">₱1250.25</h4>
+                                </div> -->
+                            </div>
+
                         </div>
                         <div class="col-lg-4">
-                            <img src="cashier_styles/pictures/print.png" class="img-fluid" alt="meh" style="width:450px">
+                            <img src="cashier_styles/pictures/print.png" class="leftimg" alt="meh">
                             <div class="cright">
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
-                                <img src="cashier_styles/pictures/search-heart.svg" width="40px" height="40px">Search<br>
-                                </button>
-
-                                <!-- The Modal -->
-                                <div class="modal" id="myModal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Modal Heading</h4>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                            </div>
-
-                                            <!-- Modal body -->
-                                            <div class="modal-body">
-                                                Modal body..
-                                            </div>
-
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
-                                <img src="cashier_styles/pictures/upc-scan.svg" width="40px" height="40px">Barcode<br>
-                                </button>
-
-                                <!-- The Modal -->
-                                <div class="modal" id="myModal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Modal Heading</h4>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                            </div>
-
-                                            <!-- Modal body -->
-                                            <div class="modal-body">
-                                                Modal body..
-                                            </div>
-
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
-                                <img src="cashier_styles/pictures/box2-heart-fill.svg" width="40px" height="40px">Package<br>
-                                </button>
-
-                                <!-- The Modal -->
-                                <div class="modal" id="myModal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Modal Heading</h4>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                            </div>
-
-                                            <!-- Modal body -->
-                                            <div class="modal-body">
-                                                Modal body..
-                                            </div>
-
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php include '../employees/cashier_modals/cashier_right_modal.php' ?>
                             </div>
                         </div>
                     </div>
@@ -108,7 +53,35 @@
             </div>
         </div>
     </div>
+    <script>
+  // Get the quantity input and buttons
+  const quantityInput = document.querySelector('.quantity');
+  const minusBtn = document.querySelector('.minus-btn');
+  const plusBtn = document.querySelector('.plus-btn');
 
+  // Add event listeners to buttons
+  minusBtn.addEventListener('click', () => {
+    decreaseQuantity();
+  });
+
+  plusBtn.addEventListener('click', () => {
+    increaseQuantity();
+  });
+
+  // Function to decrease quantity
+  function decreaseQuantity() {
+    const currentQuantity = parseInt(quantityInput.value);
+    if (currentQuantity > 1) {
+      quantityInput.value = currentQuantity - 1;
+    }
+  }
+
+  // Function to increase quantity
+  function increaseQuantity() {
+    const currentQuantity = parseInt(quantityInput.value);
+    quantityInput.value = currentQuantity + 1;
+  }
+</script>
     <?php include "../employees/includes/cashier_scripts.php" ?>
 </body>
 
