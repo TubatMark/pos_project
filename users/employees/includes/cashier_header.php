@@ -2,5 +2,5 @@
 <html>
 <head>
     <title></title>
-    <?php include '../includes/cashier_links.php' ?>
+    <?php include 'cashier_links.php' ?>
 </head>

@@ -1,7 +1,4 @@
-<header>
-    <?php include '../employees/includes/cashier_links.php' ?>
-
-</header>
+<?php include 'includes/cashier_header.php' ?>
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
