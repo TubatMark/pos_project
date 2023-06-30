@@ -1,15 +1,12 @@
-.dashboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.cright {
+    padding-left: 10px;
+    margin-top: 3px;
 }
-
-.container {
-    text-align: center;
+.cright img {
+    vertical-align: middle; 
+    margin-right: 10px; 
 }
-
-
-
-
-/* Additional styling as needed */
+.cright a {
+    text-decoration: none; 
+    color: #007bff;
+  }
