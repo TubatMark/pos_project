@@ -1,15 +1,101 @@
-.dashboard-container {
+.cright {
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.cright img {
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+.cright a {
+    text-decoration: none; 
+    color: #007bff;
+  }
+.cright {
+    position: relative;
+  }
+  
+.cright button {
+    display: block;
+    line-height: 1;
+    margin-left: 130px;
+    margin-top: 30px; /* Adjust this value to set the vertical spacing between buttons */
+  }
+.btn {
+    padding-left: 10px;
+    margin-top: 10px;
+    border-color: transparent;
+}
+.topimg{
+    margin-top: 60px;
+    margin-left: 10px;
+    height: 200px;
+    width: 200px;
+}
+.leftimg{
+    margin-top: 4px;
+    height: 320px;
+    width: 400px;
+}
+.top{
+    padding-left: 20px;
+    padding-top: 15px;
+    margin-top: 50px;
+    background-color: #2d2d2d;
+    
+}
+#h4{
+    margin-top: 30px;
+    margin-bottom: 10px;   
+    color: white;    
+}
+#h41{
+    margin-top: 30px;
+    margin-bottom: 10px;
+       
+}
+#btn-delete{
+    margin-left: 450px;
+    width: 120px;
+    margin-top: -65px;
+}
+.mid{
+    padding-left: 20px;
+    padding-top: 15px;
+    background-color: #f0f0ff;
+}
+.quantity-input {
+    display: flex;
+    align-items: center;
+    padding-left: 230px;
+    
+  }
+
+  .quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    padding: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: -35px;
+    margin-bottom: 15px;
+  }
+
+  .minus-btn,
+  .plus-btn {
+    background-color: gray;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.container {
-    text-align: center;
-}
-
-
-
-
-/* Additional styling as needed */
+    cursor: pointer;
+    margin-top: -35px;
+    margin-bottom: 15px;
+    
+  }
